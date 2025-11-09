@@ -87,11 +87,17 @@ while(True):
     # javier = sisa gold
     print(f"now you have {gold} gold")
     print(f"now your HP {hp}")
-    print(f"Lanjut bermain Atau tidak")
-    aksi = input("enter your choice lanjut / tidak")
-    if aksi == "lanjut":
-        print("okey lanjut")
-    elif aksi == "tidak":
-        print("okey stop")
-        break;
+    if hp > 0 :
+        # jika hp tidak habis, lanjut bermain
+        print(f"Lanjut bermain Atau tidak")
+        aksi = input("enter your choice lanjut / tidak")
+        if aksi == "lanjut":
+            print("okey lanjut")
+        elif aksi == "tidak":
+            print("okey stop")
+            break
+    else:
+        print (f"your hp {hp} , you lose")
+        print (f"Game Over")
+        break
 print("\nThanks for playing the Simple RPG!")
